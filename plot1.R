@@ -1,10 +1,8 @@
 ## Plot 1
 
-# Downloading file and reading as a dataframe
-temp <- tempfile()
-download.file("https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip",temp)
-data <- read.csv(unz(temp, "household_power_consumption.txt"), sep=';', na.strings = "?")
-unlink(temp)
+
+# Loading dataset into R.
+data = read.table("household_power_consumption.txt", header=TRUE, sep = ";", na.strings = "?")
 
 # Removing missing values
 data <- na.omit(data)
