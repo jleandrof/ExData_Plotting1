@@ -11,9 +11,13 @@ data <- na.omit(data)
 
 # Converting date format
 data$Date = as.Date(data$Date, format="%d/%m/%Y")
-
+as.Da
 # Defining time period
 time_period = data[(data$Date >= as.Date("2007-02-01")) & (data$Date <= as.Date("2007-02-02")), ]
 
 # Ploting histogram
 hist(time_period$Global_active_power, col="red", main = "Global Active Power", xlab = "Global Active Power (Kilowatts)")
+
+# Save png
+dev.copy(png, file = "plot1.png")
+dev.off()
