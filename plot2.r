@@ -9,7 +9,7 @@ data <- na.omit(data)
 
 # Converting date format
 data$Date = as.Date(data$Date, format="%d/%m/%Y")
-as.Da
+
 # Defining time period
 time_period = data[(data$Date >= as.Date("2007-02-01")) & (data$Date <= as.Date("2007-02-02")), ]
 
